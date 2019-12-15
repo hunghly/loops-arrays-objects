@@ -69,3 +69,75 @@ console.log(changeEnough([0, 0, 20, 5], 0.75)); // outputs true
 console.log(changeEnough([30, 40, 20, 5], 12.55)); // outputs true
 console.log(changeEnough([10, 0, 0, 50], 3.85)); // outputs false
 console.log(changeEnough([1, 0, 5, 219], 19.99)); // outputs false*/
+
+
+/*TODO Problem 5 - 'Volume of a Box' from Edabit
+Create a function that takes an object argument sizes (contains width, length, height keys) and returns the volume of the box.
+Examples
+volumeOfBox({ width: 2, length: 5, height: 1 }) ➞ 10
+volumeOfBox({ width: 4, length: 2, height: 2 }) ➞ 16
+volumeOfBox({ width: 2, length: 3, height: 5 }) ➞ 30
+Notes
+Don't forget to return the result.
+Remember that the values are in an object.*/
+
+
+/*
+console.log(volumeOfBox({width: 2, length: 5, height: 1})); // outputs 10
+console.log(volumeOfBox({width: 4, length: 2, height: 2})); // outputs 16
+console.log(volumeOfBox({width: 2, length: 3, height: 5})); // outputs 30*/
+
+
+/*TODO Problem 6 - 'Return the Objects Keys and Values' from Edabit
+Create a function that takes an object and returns the keys and values as separate arrays.
+
+Examples
+keysAndValues({ a: 1, b: 2, c: 3 })
+➞ [["a", "b", "c"], [1, 2, 3]]
+keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" })
+➞ [["a", "b", "c"], ["Apple", "Microsoft", "Google"]]
+keysAndValues({ key1: true, key2: false, key3: undefined })
+➞ [["key1", "key2", "key3"], [true, false, undefined]]*/
+
+
+/*
+console.log(keysAndValues({a: 1, b: 2, c: 3})); // outputs [["a", "b", "c"], [1, 2, 3]]
+console.log(keysAndValues({a: "Apple", b: "Microsoft", c: "Google"})); // outputs [["a", "b", "c"], ["Apple", "Microsoft", "Google"]]
+console.log(keysAndValues({key1: true, key2: false, key3: undefined})); // outputs [["key1", "key2", "key3"], [true, false, undefined]]*/
+
+/*TODO Problem 7 - 'Who's The Oldest?' from Edabit
+Given an object containing the names and ages of a group of people, return the name of the oldest person.
+
+Examples
+oldest({
+  Emma: 71,
+  Jack: 45,
+  Amy: 15,
+  Ben: 29
+}) ➞ "Emma"
+
+oldest({
+  Max: 9,
+  Josh: 13,
+  Sam: 48,
+  Anne: 33
+}) ➞ "Sam"
+Notes
+All ages will be different.*/
+
+
+
+/*
+console.log(oldest({
+    Emma: 71,
+    Jack: 45,
+    Amy: 15,
+    Ben: 29
+})); // outputs "Emma"
+
+console.log(oldest({
+    Max: 9,
+    Josh: 13,
+    Sam: 48,
+    Anne: 33
+})); // outputs "Sam"*/
