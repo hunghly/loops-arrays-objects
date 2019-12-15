@@ -64,6 +64,10 @@ dime: 10 cents / $0.10
 nickel: 5 cents / $0.05
 penny: 1 cent / $0.01*/
 
+function changeEnough(change, amountDue) {
+
+}
+
 /*console.log(changeEnough([2, 100, 0, 0], 14.11)); // outputs false
 console.log(changeEnough([0, 0, 20, 5], 0.75)); // outputs true
 console.log(changeEnough([30, 40, 20, 5], 12.55)); // outputs true
@@ -80,6 +84,10 @@ volumeOfBox({ width: 2, length: 3, height: 5 }) ➞ 30
 Notes
 Don't forget to return the result.
 Remember that the values are in an object.*/
+
+function volumeOfBox(sizes) {
+
+}
 
 
 /*
@@ -98,6 +106,10 @@ keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" })
 ➞ [["a", "b", "c"], ["Apple", "Microsoft", "Google"]]
 keysAndValues({ key1: true, key2: false, key3: undefined })
 ➞ [["key1", "key2", "key3"], [true, false, undefined]]*/
+
+function keysAndValues(obj) {
+
+}
 
 
 /*
@@ -125,7 +137,9 @@ oldest({
 Notes
 All ages will be different.*/
 
+let oldest = function (people) {
 
+};
 
 /*
 console.log(oldest({
@@ -141,3 +155,80 @@ console.log(oldest({
     Sam: 48,
     Anne: 33
 })); // outputs "Sam"*/
+
+
+/*TODO Problem 8 - 'Longest Streak' from Edabit
+Create a function that takes an array of date objects and return the "longest streak" (i.e. number of consecutive days in a row).
+
+Example
+longestStreak([
+  {
+    "date": "2019-09-18"
+  },
+  {
+    "date": "2019-09-19"
+  },
+  {
+    "date": "2019-09-20"
+  },
+  {
+    "date": "2019-09-26"
+  },
+  {
+    "date": "2019-09-27"
+  },
+  {
+    "date": "2019-09-30"
+  }
+]) ➞ 3*/
+
+
+function longestStreak(arr) {
+    let milliSecsInDay = 86400000;
+    let difference;
+    let currentDate;
+    let nextDate;
+    let consecutiveDays = 1;
+    let maxConsecutiveDays = 0;
+    let newStreakOfDays = false;
+
+    for (let i = 0; i < arr.length; i++) {
+        currentDate = Date.parse(arr[i].date);
+        nextDate = Date.parse(arr[i+1].date);
+        difference = (nextDate - currentDate) / milliSecsInDay;
+
+        if (difference !== 1) {
+            consecutiveDays = 1;
+            newStreakOfDays = true;
+        } else if (difference === 1 && !newStreakOfDays) {
+            consecutiveDays++;
+            if (consecutiveDays > maxConsecutiveDays) {
+                maxConsecutiveDays = consecutiveDays;
+            }
+            newStreakOfDays = false;
+        }
+        console.log(maxConsecutiveDays);
+    }
+    return maxConsecutiveDays;
+}
+
+console.log(longestStreak([
+    {
+        "date": "2019-09-18"
+    },
+    {
+        "date": "2019-09-19"
+    },
+    {
+        "date": "2019-09-20"
+    },
+    {
+        "date": "2019-09-26"
+    },
+    {
+        "date": "2019-09-27"
+    },
+    {
+        "date": "2019-09-30"
+    }
+])); // outputs 3
