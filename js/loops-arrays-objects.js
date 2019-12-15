@@ -182,35 +182,11 @@ longestStreak([
   }
 ]) ➞ 3*/
 
-
 function longestStreak(arr) {
-    let milliSecsInDay = 86400000;
-    let difference;
-    let currentDate;
-    let nextDate;
-    let consecutiveDays = 1;
-    let maxConsecutiveDays = 0;
-    let newStreakOfDays = false;
 
-    for (let i = 0; i < arr.length; i++) {
-        currentDate = Date.parse(arr[i].date);
-        nextDate = Date.parse(arr[i+1].date);
-        difference = (nextDate - currentDate) / milliSecsInDay;
-
-        if (difference !== 1) {
-            consecutiveDays = 1;
-            newStreakOfDays = true;
-        } else if (difference === 1 && !newStreakOfDays) {
-            consecutiveDays++;
-            if (consecutiveDays > maxConsecutiveDays) {
-                maxConsecutiveDays = consecutiveDays;
-            }
-            newStreakOfDays = false;
-        }
-        console.log(maxConsecutiveDays);
-    }
-    return maxConsecutiveDays;
 }
+
+/*
 
 console.log(longestStreak([
     {
@@ -232,3 +208,5 @@ console.log(longestStreak([
         "date": "2019-09-30"
     }
 ])); // outputs 3
+
+console.log(longestStreak([])); // outputs 0*/
